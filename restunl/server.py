@@ -1,3 +1,5 @@
+import requests
+
 class RestServer(object):
     def __init__(self, address):
         self.cookies = None
@@ -7,7 +9,7 @@ class RestServer(object):
         response = None
         url = self.base_url + path
         try:
-            response = requests.request(method, url, json=data, cokies=self.cookies)
+            response = requests.request(method, url, json=data, cookies=self.cookies)
         except requests.exceptions.RequestException as e:
             print ('ERROR: Error calling %s: %s', url. e.message)
         return response
