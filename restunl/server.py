@@ -18,7 +18,7 @@ class RestServer(object):
     def add_object(self, api_call, data=None):
         return self._send_request('POST', api_call, data)
 
-    def update_object(self, api_call, dta=None):
+    def update_object(self, api_call, data=None):
         return self._send_request('PUT', api_call, data)
 
     def delete_object(self, api_call, data=None):
